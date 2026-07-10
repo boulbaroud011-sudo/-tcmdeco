@@ -23,7 +23,8 @@ export default async function HomePage() {
           <div>
             <div className="inline-flex items-center gap-3 rounded-full border border-black/5 bg-white/80 px-4 py-2 text-sm font-black text-slate-700 shadow-sm backdrop-blur">
               <span className="grid size-7 place-items-center rounded-full bg-emerald-100 text-emerald-700">✓</span>
-              TCM deco — ديكور يوصل حتى لدارك
+          TCM deco — جودة وفخامة توصلك لدارك
+
             </div>
             <h1 className="mt-7 max-w-3xl text-5xl font-black leading-[1.05] tracking-tight text-slate-950 sm:text-6xl lg:text-7xl">
          أناقة وفخامة لكل زاوية
