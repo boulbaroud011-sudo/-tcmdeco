@@ -26,7 +26,7 @@ export default async function HomePage() {
               TCM deco — ديكور يوصل حتى لدارك
             </div>
             <h1 className="mt-7 max-w-3xl text-5xl font-black leading-[1.05] tracking-tight text-slate-950 sm:text-6xl lg:text-7xl">
-              Stor ديال deco فخم، منظم، وكيبيع مباشرة عبر واتساب.
+          اكتشف تشكيلة مختارة من الديكورات والإكسسوارات الحديدية العصرية، بتصاميم راقية وجودة عالية، باش تضيف لمسة ديال الأناقة والفخامة لكل زاوية فدارك.
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-9 text-slate-600">
               اختار المنتج، شوف الصور والريفيوهات ديال الناس اللي وصلهم، عمر الاسم والنمرة والعنوان، ومن بعد كوموندي بزر أخضر كيدوزك لواتساب.
