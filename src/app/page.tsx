@@ -69,15 +69,7 @@ export default async function HomePage() {
                 <div className="mx-auto flex max-w-sm justify-center rounded-[2rem] bg-white p-8 shadow-xl shadow-slate-950/5">
                   <Logo />
                 </div>
-                <div className="mt-8 grid gap-4 sm:grid-cols-2">
-                  {featuredProducts.slice(0, 2).map((product) => (
-                    <Link key={product.id} href={`/products/${product.slug}`} className="rounded-3xl bg-white p-4 shadow-sm transition hover:-translate-y-1">
-                      <p className="text-xs font-black text-emerald-700">{product.badge}</p>
-                      <h3 className="mt-2 font-black text-slate-950">{product.name}</h3>
-                      <p className="mt-2 text-sm font-bold text-slate-500">{formatPrice(product.price)}</p>
-                    </Link>
-                  ))}
-                </div>
+             
               </div>
             </div>
           </div>
