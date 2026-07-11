@@ -31,8 +31,7 @@ export default async function HomePage() {
             </h1>
             <p className="mt-6 max-w-2xl text-lg leading-9 text-slate-600">
              .اكتشف تشكيلة مختارة من الديكورات والإكسسوارات الحديدية العصرية، بتصاميم راقية وجودة عالية، باش تضيف لمسة ديال الأناقة والفخامة لكل زاوية فدارك.
-            </p>
-            <div className="mt-8 flex flex-wrap gap-3">
+            </p><div className="mt-8 flex flex-wrap justify-center gap-3">
               <Link
                 href="/products"
                 className="rounded-full bg-slate-950 px-7 py-4 text-sm font-black text-white shadow-xl shadow-slate-950/15 transition hover:-translate-y-1 hover:bg-slate-800"
