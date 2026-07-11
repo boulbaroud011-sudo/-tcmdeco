@@ -29,7 +29,7 @@ export default async function HomePage() {
             <h1 className="mt-7 max-w-3xl text-5xl font-black leading-[1.05] tracking-tight text-slate-950 sm:text-6xl lg:text-7xl">
          أناقة وفخامة لكل زاوية
             </h1>
-            <p className="mt-6 max-w-2xl text-lg leading-9 text-slate-600">
+            <p dir="rtl"className="mt-6 max-w-2xl text-lg leading-9 text-slate-600">
              .اكتشف تشكيلة مختارة من الديكورات والإكسسوارات الحديدية العصرية، بتصاميم راقية وجودة عالية، باش تضيف لمسة ديال الأناقة والفخامة لكل زاوية فدارك.
             </p><div className="mt-8 flex flex-wrap justify-center gap-3">
               <Link
