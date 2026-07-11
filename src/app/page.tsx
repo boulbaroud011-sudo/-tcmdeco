@@ -62,19 +62,7 @@ export default async function HomePage() {
             </dl>
           </div>
 
-          <div className="relative">
-            <div className="absolute -right-8 -top-8 -z-10 size-44 rounded-full bg-emerald-200/50 blur-3xl" />
-            <div className="rounded-[3rem] border border-black/5 bg-white p-6 shadow-2xl shadow-slate-950/10">
-              <div className="rounded-[2.5rem] bg-[#fbf7f0] p-8">
-                <div className="mx-auto flex max-w-sm justify-center rounded-[2rem] bg-white p-8 shadow-xl shadow-slate-950/5">
-                  <Logo />
-                </div>
-             
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+     /section>
 
       <section className="px-4 py-12 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">
