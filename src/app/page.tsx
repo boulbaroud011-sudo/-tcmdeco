@@ -19,7 +19,7 @@ export default async function HomePage() {
       <Header />
       <section className="relative overflow-hidden px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
         <div className="absolute inset-x-0 top-0 -z-10 h-80 bg-gradient-to-b from-white/80 to-transparent" />
-        <div className="mx-auto grid max-w-7xl items-center gap-10 lg:grid-cols-[1.05fr_0.95fr]">
+  <div className="mx-auto flex max-w-4xl flex-col items-center text-center">
           <div>
             <div className="inline-flex items-center gap-3 rounded-full border border-black/5 bg-white/80 px-4 py-2 text-sm font-black text-slate-700 shadow-sm backdrop-blur">
               <span className="grid size-7 place-items-center rounded-full bg-emerald-100 text-emerald-700">✓</span>
