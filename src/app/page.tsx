@@ -1,11 +1,10 @@
 import Link from "next/link";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
-import { Logo } from "@/components/Logo";
 import { ProductCard } from "@/components/ProductCard";
 import { ProductImageEditor } from "@/components/ProductImageEditor";
 import { WhatsAppFloating } from "@/components/WhatsAppFloating";
-import { formatPrice, getFeaturedProducts, getLatestReviews, whatsappNumber } from "@/lib/tcm-data";
+import { getFeaturedProducts, getLatestReviews, whatsappNumber } from "@/lib/tcm-data";
 
 export const dynamic = "force-dynamic";
 
@@ -19,49 +18,47 @@ export default async function HomePage() {
       <Header />
       <section className="relative overflow-hidden px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
         <div className="absolute inset-x-0 top-0 -z-10 h-80 bg-gradient-to-b from-white/80 to-transparent" />
-  <div className="mx-auto flex max-w-4xl flex-col items-center text-center">
-          <div>
-            <div className="inline-flex items-center gap-3 rounded-full border border-black/5 bg-white/80 px-4 py-2 text-sm font-black text-slate-700 shadow-sm backdrop-blur">
-              <span className="grid size-7 place-items-center rounded-full bg-emerald-100 text-emerald-700">✓</span>
-          TCM deco — جودة وفخامة توصلك لدارك
-
-            </div>
-            <h1 className="mt-7 max-w-3xl text-5xl font-black leading-[1.05] tracking-tight text-slate-950 sm:text-6xl lg:text-7xl">
-         أناقة وفخامة لكل زاوية
-            </h1>
-            <p dir="rtl"className="mt-6 max-w-2xl text-lg leading-9 text-slate-600">
-             .اكتشف تشكيلة مختارة من الديكورات والإكسسوارات الحديدية العصرية، بتصاميم راقية وجودة عالية، باش تضيف لمسة ديال الأناقة والفخامة لكل زاوية فدارك.
-            </p><div className="mt-8 flex flex-wrap justify-center gap-3">
-              <Link
-                href="/products"
-                className="rounded-full bg-slate-950 px-7 py-4 text-sm font-black text-white shadow-xl shadow-slate-950/15 transition hover:-translate-y-1 hover:bg-slate-800"
-              >
-                شوف المنتجات
-              </Link>
-              <a
-                href={`https://wa.me/${phone}?text=${message}`}
-                target="_blank"
-                rel="noreferrer"
-                className="rounded-full bg-emerald-600 px-7 py-4 text-sm font-black text-white shadow-xl shadow-emerald-900/20 transition hover:-translate-y-1 hover:bg-emerald-700"
-              >
-                سولنا فالواتساب
-              </a>
-            </div>
-            <dl className="mt-10 grid max-w-2xl grid-cols-3 gap-3">
-              {[
-                ["+600", "كوموندات"],
-                ["4.9/5", "تقييم"],
-                ["24h", "رد سريع"],
-              ].map(([value, label]) => (
-                <div key={label} className="rounded-3xl bg-white/80 p-4 text-center shadow-sm backdrop-blur">
-                  <dt className="text-2xl font-black text-slate-950">{value}</dt>
-                  <dd className="mt-1 text-xs font-bold text-slate-500">{label}</dd>
-                </div>
-              ))}
-            </dl>
+        <div className="mx-auto flex max-w-4xl flex-col items-center text-center">
+          <div className="inline-flex items-center gap-3 rounded-full border border-black/5 bg-white/80 px-4 py-2 text-sm font-black text-slate-700 shadow-sm backdrop-blur">
+            <span className="grid size-7 place-items-center rounded-full bg-emerald-100 text-emerald-700">✓</span>
+            TCM deco — جودة وفخامة توصلك لدارك
           </div>
-
-     </section>
+          <h1 className="mt-7 max-w-3xl text-5xl font-black leading-[1.05] tracking-tight text-slate-950 sm:text-6xl lg:text-7xl">
+            أناقة وفخامة لكل زاوية
+          </h1>
+          <p dir="rtl" className="mt-6 max-w-2xl text-lg leading-9 text-slate-600">
+            اكتشف تشكيلة مختارة من الديكورات والإكسسوارات الحديدية العصرية، بتصاميم راقية وجودة عالية، باش تضيف لمسة ديال الأناقة والفخامة لكل زاوية فدارك.
+          </p>
+          <div className="mt-8 flex flex-wrap justify-center gap-3">
+            <Link
+              href="/products"
+              className="rounded-full bg-slate-950 px-7 py-4 text-sm font-black text-white shadow-xl shadow-slate-950/15 transition hover:-translate-y-1 hover:bg-slate-800"
+            >
+              شوف المنتجات
+            </Link>
+            
+              href={`https://wa.me/${phone}?text=${message}`}
+              target="_blank"
+              rel="noreferrer"
+              className="rounded-full bg-emerald-600 px-7 py-4 text-sm font-black text-white shadow-xl shadow-emerald-900/20 transition hover:-translate-y-1 hover:bg-emerald-700"
+            >
+              سولنا فالواتساب
+            </a>
+          </div>
+          <dl className="mt-10 grid w-full max-w-2xl grid-cols-3 gap-3">
+            {[
+              ["+600", "كوموندات"],
+              ["4.9/5", "تقييم"],
+              ["24h", "رد سريع"],
+            ].map(([value, label]) => (
+              <div key={label} className="rounded-3xl bg-white/80 p-4 text-center shadow-sm backdrop-blur">
+                <dt className="text-2xl font-black text-slate-950">{value}</dt>
+                <dd className="mt-1 text-xs font-bold text-slate-500">{label}</dd>
+              </div>
+            ))}
+          </dl>
+        </div>
+      </section>
 
       <section className="px-4 py-12 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">
