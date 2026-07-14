@@ -71,24 +71,64 @@ export default async function HomePage() {
         </div>
       </section>
 
-      <section className="px-4 py-12 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-7xl rounded-[3rem] bg-slate-950 p-6 text-white shadow-2xl shadow-slate-950/15 sm:p-10">
-          <div className="grid gap-6 lg:grid-cols-4">
-            {[
-              ["01", "اختار المنتج", "دخل للمنتج وشوف الصور، التفاصيل والريفيوهات."],
-              ["02", "عمر الخانات", "كتب الاسم، النمرة، والعنوان في form ديال الطلب."],
-              ["03", "كوموندي", "ضغط على الزر الأخضر وغادي يتفتح واتساب بتفاصيل الطلب."],
-              ["04", "توصل وتصور", "منين يوصل المنتج صيفط لينا صورتك ونزيدوها فالريفيوهات."],
-            ].map(([step, title, text]) => (
-              <div key={step} className="rounded-[2rem] bg-white/8 p-5 ring-1 ring-white/10">
-                <span className="text-sm font-black text-emerald-300">{step}</span>
-                <h3 className="mt-4 text-xl font-black">{title}</h3>
-                <p className="mt-3 text-sm leading-7 text-slate-300">{text}</p>
-              </div>
-            ))}
-          </div>
+     <section className="px-4 py-12 sm:px-6 lg:px-8">
+        <div className="mx-auto grid max-w-7xl gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          {[
+            {
+              title: "دفع عند الاستلام",
+              text: "خلّص فقط منين توصلك السلعة لدارك.",
+              icon: (
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" className="size-7">
+                  <path d="M3 12h4l2-2 3 3 3-3 3 3h3" />
+                  <path d="M4 12v6a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-6" />
+                  <path d="M8 12V7a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v5" />
+                </svg>
+              ),
+            },
+            {
+              title: "توصيل مجاني",
+              text: "التوصيل مجاني لجميع الطلبات فالمغرب كامل.",
+              icon: (
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" className="size-7">
+                  <path d="M3 6h11v9H3z" />
+                  <path d="M14 9h4l3 3v3h-7" />
+                  <circle cx="7" cy="18" r="1.6" />
+                  <circle cx="17" cy="18" r="1.6" />
+                </svg>
+              ),
+            },
+            {
+              title: "خدمة 24/24",
+              text: "حنا هنا فأي وقت باش نجاوبوك.",
+              icon: (
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" className="size-7">
+                  <circle cx="12" cy="12" r="9" />
+                  <path d="M12 7v5l3 2" />
+                </svg>
+              ),
+            },
+            {
+              title: "7/7 أيام",
+              text: "خدمة متاحة كل أيام الأسبوع.",
+              icon: (
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" className="size-7">
+                  <rect x="3" y="4" width="18" height="17" rx="2" />
+                  <path d="M3 9h18M8 2v4M16 2v4" />
+                  <path d="M9 15l2 2 4-4" />
+                </svg>
+              ),
+            },
+          ].map((feature) => (
+            <div key={feature.title} className="flex flex-col items-center rounded-[2rem] border border-emerald-100 bg-white p-6 text-center shadow-sm">
+              <span className="grid size-14 place-items-center rounded-2xl bg-emerald-50 text-emerald-700">
+                {feature.icon}
+              </span>
+              <h3 className="mt-4 text-lg font-black text-slate-950">{feature.title}</h3>
+              <p className="mt-2 text-sm font-bold leading-6 text-slate-500">{feature.text}</p>
+            </div>
+          ))}
         </div>
-      </section>
+      </section>>
 
       <section id="reviews" className="px-4 py-12 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">
