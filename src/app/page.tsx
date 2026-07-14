@@ -71,6 +71,25 @@ export default async function HomePage() {
         </div>
       </section>
 
+      <section className="px-4 py-12 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl rounded-[3rem] bg-slate-950 p-6 text-white shadow-2xl shadow-slate-950/15 sm:p-10">
+          <div className="grid gap-6 lg:grid-cols-4">
+            {[
+              ["01", "اختار المنتج", "دخل للمنتج وشوف الصور، التفاصيل والريفيوهات."],
+              ["02", "عمر الخانات", "كتب الاسم، النمرة، والعنوان في form ديال الطلب."],
+              ["03", "كوموندي", "ضغط على الزر الأخضر وغادي يتفتح واتساب بتفاصيل الطلب."],
+              ["04", "توصل وتصور", "منين يوصل المنتج صيفط لينا صورتك ونزيدوها فالريفيوهات."],
+            ].map(([step, title, text]) => (
+              <div key={step} className="rounded-[2rem] bg-white/8 p-5 ring-1 ring-white/10">
+                <span className="text-sm font-black text-emerald-300">{step}</span>
+                <h3 className="mt-4 text-xl font-black">{title}</h3>
+                <p className="mt-3 text-sm leading-7 text-slate-300">{text}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section id="reviews" className="px-4 py-12 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">
           <div className="max-w-2xl">
