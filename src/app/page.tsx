@@ -118,16 +118,16 @@ export default async function HomePage() {
                 </svg>
               ),
             },
-          ].map((feature) => (
+          ].map((feature) => (            </div>
+          ))}
+        </div>
+      </section>
             <div key={feature.title} className="flex flex-col items-center rounded-[2rem] border border-emerald-100 bg-white p-6 text-center shadow-sm">
               <span className="grid size-14 place-items-center rounded-2xl bg-emerald-50 text-emerald-700">
                 {feature.icon}
               </span>
               <h3 className="mt-4 text-lg font-black text-slate-950">{feature.title}</h3>
               <p className="mt-2 text-sm font-bold leading-6 text-slate-500">{feature.text}</p>
-            128 |             </div>
-  129 |      
-> 130 |           <div className="max-w-2xl">
       |                ^^^^^^^^^
   131 |             <p className="text-sm font-black text-emerald-700">Reviews dyal clients</p>
   132 |             <h2 className="mt-3 text-3xl font-black text-slate-950 sm:text-4xl">ناس كومون...
