@@ -71,7 +71,7 @@ export default async function HomePage() {
         </div>
       </section>
 
-     <section className="px-4 py-12 sm:px-6 lg:px-8">
+      <section className="px-4 py-12 sm:px-6 lg:px-8">
         <div className="mx-auto grid max-w-7xl gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {[
             {
@@ -118,21 +118,20 @@ export default async function HomePage() {
                 </svg>
               ),
             },
-          ].map((feature) => (            </div>
-          ))}
-        </div>
-      </section>
+          ].map((feature) => (
             <div key={feature.title} className="flex flex-col items-center rounded-[2rem] border border-emerald-100 bg-white p-6 text-center shadow-sm">
               <span className="grid size-14 place-items-center rounded-2xl bg-emerald-50 text-emerald-700">
                 {feature.icon}
               </span>
               <h3 className="mt-4 text-lg font-black text-slate-950">{feature.title}</h3>
               <p className="mt-2 text-sm font-bold leading-6 text-slate-500">{feature.text}</p>
-      |                ^^^^^^^^^
-  131 |             <p className="text-sm font-black text-emerald-700">Reviews dyal clients</p>
-  132 |             <h2 className="mt-3 text-3xl font-black text-slate-950 sm:text-4xl">ناس كومون...
-  133 |           </div> </div>
-     
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section id="reviews" className="px-4 py-12 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl">
           <div className="max-w-2xl">
             <p className="text-sm font-black text-emerald-700">Reviews dyal clients</p>
             <h2 className="mt-3 text-3xl font-black text-slate-950 sm:text-4xl">ناس كومونداو، وصلهم المنتج، وصوّروه لينا</h2>
