@@ -125,7 +125,13 @@ export default async function HomePage() {
               </span>
               <h3 className="mt-4 text-lg font-black text-slate-950">{feature.title}</h3>
               <p className="mt-2 text-sm font-bold leading-6 text-slate-500">{feature.text}</p>
-            </div>
+            128 |             </div>
+  129 |      
+> 130 |           <div className="max-w-2xl">
+      |                ^^^^^^^^^
+  131 |             <p className="text-sm font-black text-emerald-700">Reviews dyal clients</p>
+  132 |             <h2 className="mt-3 text-3xl font-black text-slate-950 sm:text-4xl">ناس كومون...
+  133 |           </div> </div>
      
           <div className="max-w-2xl">
             <p className="text-sm font-black text-emerald-700">Reviews dyal clients</p>
