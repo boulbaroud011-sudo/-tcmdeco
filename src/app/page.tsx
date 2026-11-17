@@ -1,170 +1,339 @@
-import Link from "next/link";
-import { Footer } from "@/components/Footer";
-import { Header } from "@/components/Header";
-import { ProductCard } from "@/components/ProductCard";
-import { ProductImageEditor } from "@/components/ProductImageEditor";
-import { WhatsAppFloating } from "@/components/WhatsAppFloating";
-import { getFeaturedProducts, getLatestReviews, whatsappNumber } from "@/lib/tcm-data";
+chof ghan3tk wahd lcod dyal wahd prodakte pege   obghit   trdo liya lsora dyalo front and   fhmti bghi nchofo   bhala dkhl mn ghogl  okanchof had lprodakte pege    ha lkod ha howa                                                                                                                        \<html lang="ar" dir="rtl">
+\<head>
+  \<meta charset="utf-8">
+  \<meta name="viewport" content="width=device-width, initial-scale=1">
+  \<title>علاقة الغصن — Dini Decor\</title>
+  \<link rel="preconnect" href="[https://fonts.googleapis.com](https://fonts.googleapis.com)">
+  \<link rel="preconnect" href="[https://fonts.gstatic.com](https://fonts.gstatic.com)" crossorigin>
+  \<link href="[https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&display=swap](https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700\&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600\&display=swap)" rel="stylesheet">
+  \<style>
+    :root {
+      --paper: #f4ecdf;
+      --sand: #e9dfcf;
+      --card: #fbf7f0;
+      --ink: #2a241c;
+      --muted: #7d7162;
+      --gold: #a07d45;
+      --line: #e0d3c0;
+      --black: #171717;
+    }
 
-export const dynamic = "force-dynamic";
+    \* { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      min-height: 100vh;
+      font-family: "Cairo", "Segoe UI", Tahoma, sans-serif;
+      color: var(--ink);
+      background:
+        radial-gradient(1200px 500px at 100% -10%, rgba(255,255,255,.55), transparent 60%),
+        linear-gradient(180deg, #f7f1e7 0%, var(--paper) 40%, #efe4d2 100%);
+    }
 
-export default async function HomePage() {
-  const [featuredProducts, latestReviews] = await Promise.all([getFeaturedProducts(), getLatestReviews(3)]);
-  const phone = whatsappNumber();
-  const message = encodeURIComponent("Salam TCM deco, bghit catalogue dyal produits déco.");
+    .page {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 28px 28px 64px;
+    }
 
-  return (
-    <main>
-      <Header />
-      <section className="relative overflow-hidden px-4 py-14 sm:px-6 lg:px-8 lg:py-20">
-        <div className="absolute inset-x-0 top-0 -z-10 h-80 bg-gradient-to-b from-white/80 to-transparent" />
-        <div className="mx-auto flex max-w-4xl flex-col items-center text-center">
-          <div className="inline-flex items-center gap-3 rounded-full border border-black/5 bg-white/80 px-4 py-2 text-sm font-black text-slate-700 shadow-sm backdrop-blur">
-            <span className="grid size-7 place-items-center rounded-full bg-emerald-100 text-emerald-700">✓</span>
-            TCM deco — جودة وفخامة توصلك لدارك
-          </div>
-          <h1 className="mt-7 max-w-3xl text-5xl font-black leading-[1.05] tracking-tight text-slate-950 sm:text-6xl lg:text-7xl">
-            أناقة وفخامة لكل زاوية
-          </h1>
-          <p dir="rtl" className="mt-6 max-w-2xl text-lg leading-9 text-slate-600">
-            اكتشف تشكيلة مختارة من الديكورات والإكسسوارات الحديدية العصرية، بتصاميم راقية وجودة عالية، باش تضيف لمسة ديال الأناقة والفخامة لكل زاوية فدارك.
-          </p>
-          <div className="mt-8 flex flex-wrap justify-center gap-3">
-            <Link href="/products" className="rounded-full bg-slate-950 px-7 py-4 text-sm font-black text-white shadow-xl shadow-slate-950/15 transition hover:-translate-y-1 hover:bg-slate-800">
-              شوف المنتجات
-            </Link>
-            <a href={`https://wa.me/${phone}?text=${message}`} target="_blank" rel="noreferrer" className="rounded-full bg-emerald-600 px-7 py-4 text-sm font-black text-white shadow-xl shadow-emerald-900/20 transition hover:-translate-y-1 hover:bg-emerald-700">
-              سولنا فالواتساب
-            </a>
-          </div>
-          <dl className="mt-10 grid w-full max-w-2xl grid-cols-3 gap-3">
-            {[
-              ["+600", "كوموندات"],
-              ["4.9/5", "تقييم"],
-              ["24h", "رد سريع"],
-            ].map(([value, label]) => (
-              <div key={label} className="rounded-3xl bg-white/80 p-4 text-center shadow-sm backdrop-blur">
-                <dt className="text-2xl font-black text-slate-950">{value}</dt>
-                <dd className="mt-1 text-xs font-bold text-slate-500">{label}</dd>
-              </div>
-            ))}
-          </dl>
-        </div>
-      </section>
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 22px;
+    }
 
-      <section className="px-4 py-12 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-7xl">
-          <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
-            <div>
-              <p className="text-sm font-black text-emerald-700">Produits populaires</p>
-              <h2 className="mt-3 text-3xl font-black text-slate-950 sm:text-4xl">منتجات مميزة من TCM deco</h2>
-            </div>
-            <Link href="/products" className="font-black text-slate-950 underline decoration-emerald-500 decoration-4 underline-offset-8">
-              كل المنتجات
-            </Link>
-          </div>
-          <div className="mt-8 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-            {featuredProducts.map((product) => (
-              <ProductCard key={product.id} product={product} />
-            ))}
-          </div>
-        </div>
-      </section>
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
 
-      <section className="px-4 py-12 sm:px-6 lg:px-8">
-        <div className="mx-auto grid max-w-7xl gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {[
-            {
-              title: "دفع عند الاستلام",
-              text: "خلّص فقط منين توصلك السلعة لدارك.",
-              icon: (
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" className="size-7">
-                  <path d="M3 12h4l2-2 3 3 3-3 3 3h3" />
-                  <path d="M4 12v6a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-6" />
-                  <path d="M8 12V7a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v5" />
-                </svg>
-              ),
-            },
-            {
-              title: "توصيل مجاني",
-              text: "التوصيل مجاني لجميع الطلبات فالمغرب كامل.",
-              icon: (
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" className="size-7">
-                  <path d="M3 6h11v9H3z" />
-                  <path d="M14 9h4l3 3v3h-7" />
-                  <circle cx="7" cy="18" r="1.6" />
-                  <circle cx="17" cy="18" r="1.6" />
-                </svg>
-              ),
-            },
-            {
-              title: "خدمة 24/24",
-              text: "حنا هنا فأي وقت باش نجاوبوك.",
-              icon: (
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" className="size-7">
-                  <circle cx="12" cy="12" r="9" />
-                  <path d="M12 7v5l3 2" />
-                </svg>
-              ),
-            },
-            {
-              title: "7/7 أيام",
-              text: "خدمة متاحة كل أيام الأسبوع.",
-              icon: (
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" className="size-7">
-                  <rect x="3" y="4" width="18" height="17" rx="2" />
-                  <path d="M3 9h18M8 2v4M16 2v4" />
-                  <path d="M9 15l2 2 4-4" />
-                </svg>
-              ),
-            },
-          ].map((feature) => (
-            <div key={feature.title} className="flex flex-col items-center rounded-[2rem] border border-emerald-100 bg-white p-6 text-center shadow-sm">
-              <span className="grid size-14 place-items-center rounded-2xl bg-emerald-50 text-emerald-700">
-                {feature.icon}
-              </span>
-              <h3 className="mt-4 text-lg font-black text-slate-950">{feature.title}</h3>
-              <p className="mt-2 text-sm font-bold leading-6 text-slate-500">{feature.text}</p>
-            </div>
-          ))}
-        </div>
-      </section>
+    .seal {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      border: 1px solid #c6b48a;
+      background:
+        radial-gradient(circle at 50% 45%, #f8f3ea 0 58%, #d9c7a2 59% 62%, #f4efe4 63% 100%);
+      display: grid;
+      place-items: center;
+      text-align: center;
+      box-shadow: inset 0 0 0 4px rgba(255,255,255,.65);
+    }
+    .seal small {
+      display: block;
+      font-size: 7px;
+      letter-spacing: .14em;
+      color: var(--gold);
+      font-weight: 600;
+    }
+    .seal strong {
+      display: block;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-style: italic;
+      font-weight: 600;
+      font-size: 15px;
+      line-height: 1;
+      color: #3d3428;
+    }
+    .brand p {
+      margin: 0;
+      font-size: 12px;
+      letter-spacing: .22em;
+      color: var(--muted);
+    }
 
-      <section id="reviews" className="px-4 py-12 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-7xl">
-          <div className="max-w-2xl">
-            <p className="text-sm font-black text-emerald-700">Reviews dyal clients</p>
-            <h2 className="mt-3 text-3xl font-black text-slate-950 sm:text-4xl">ناس كومونداو، وصلهم المنتج، وصوّروه لينا</h2>
-          </div>
-          <div className="mt-8 grid gap-6 md:grid-cols-3">
-            {latestReviews.map((review) => (
-              <article key={review.id} className="rounded-[2rem] bg-white p-4 shadow-xl shadow-slate-950/5">
-                <ProductImageEditor
-                  id={review.id}
-                  kind="review"
-                  src={review.imageUrl}
-                  alt={`Review ${review.customerName}`}
-                  className="aspect-[4/3]"
-                  priorityLabel="Review"
-                />
-                <div className="p-3">
-                  <p className="text-sm font-bold text-amber-600">{"★".repeat(review.rating)}</p>
-                  <p className="mt-3 text-sm leading-7 text-slate-600">“{review.comment}”</p>
-                  <div className="mt-4 flex items-center justify-between gap-3 text-sm">
-                    <span className="font-black text-slate-950">{review.customerName} - {review.city}</span>
-                    <Link href={`/products/${review.productSlug}`} className="font-black text-emerald-700">
-                      {review.productName}
-                    </Link>
-                  </div>
-                </div>
-              </article>
-            ))}
-          </div>
-        </div>
-      </section>
+    .chip {
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.45);
+      color: var(--muted);
+      border-radius: 999px;
+      padding: 8px 14px;
+      font-size: 13px;
+    }
 
-      <Footer />
-      <WhatsAppFloating />
-    </main>
-  );
-}
+    .stage {
+      display: grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap: 28px;
+      align-items: stretch;
+    }
+
+    .visual {
+      background: linear-gradient(180deg, #f8f3ea, #efe6d6);
+      border: 1px solid #e7dccb;
+      border-radius: 28px;
+      min-height: 620px;
+      display: grid;
+      place-items: center;
+      padding: 18px;
+      position: relative;
+      overflow: hidden;
+    }
+    .visual img {
+      width: 100%;
+      height: 100%;
+      max-height: 640px;
+      object-fit: contain;
+      border-radius: 18px;
+    }
+
+    .info {
+      background: var(--card);
+      border: 1px solid #eadfcf;
+      border-radius: 28px;
+      padding: 36px 32px 28px;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 20px 50px rgba(90, 68, 36, .06);
+    }
+
+    .eyebrow {
+      margin: 0 0 8px;
+      color: var(--gold);
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: .08em;
+    }
+    h1 {
+      margin: 0;
+      font-size: 42px;
+      line-height: 1.15;
+      font-weight: 700;
+    }
+    .latin {
+      margin: 6px 0 0;
+      font-family: "Cormorant Garamond", Georgia, serif;
+      font-style: italic;
+      font-size: 22px;
+      color: var(--muted);
+    }
+    .lead {
+      margin: 18px 0 0;
+      color: #5c5348;
+      font-size: 16px;
+      line-height: 1.8;
+    }
+
+    .price-row {
+      display: Aflex;
+      align-items: flex-end;
+      justify-content: space-between;
+      margin-top: 26px;
+      padding-top: 20px;
+      border-top: 1px solid var(--line);
+    }
+    .price {
+      font-size: 40px;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+    }
+    .price span {
+      font-size: 18px;
+      font-weight: 600;
+      margin-right: 6px;
+      color: var(--muted);
+    }
+    .free {
+      background: #f3ead7;
+      color: #8a6933;
+      border-radius: 999px;
+      padding: 8px 12px;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .facts {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-top: 22px;
+    }
+    .fact {
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 12px 14px;
+      background: #fffdf9;
+    }
+    .fact b {
+      display: block;
+      font-size: 15px;
+    }
+    .fact small {
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .buy {
+      display: flex;
+      gap: 10px;
+      margin-top: 22px;
+    }
+    .qty {
+      display: flex;
+      align-items: center;
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      overflow: hidden;
+      background: #fff;
+    }
+    .qty button {
+      width: 42px;
+      height: 52px;
+      border: 0;
+      background: transparent;
+      font-size: 20px;
+      cursor: pointer;
+      color: var(--ink);
+    }
+    .qty strong {
+      min-width: 24px;
+      text-align: center;
+      font-size: 16px;
+    }
+    .order {
+      flex: 1;
+      height: 52px;
+      border: 0;
+      border-radius: 14px;
+      background: var(--black);
+      color: #f6efe4;
+      font-family: inherit;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .order:hover { background: #2b2b2b; }
+
+    .note {
+      margin: 14px 0 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .toast {
+      display: none;
+      margin-top: 14px;
+      background: #f4efe4;
+      border: 1px solid #e4d5b8;
+      color: #6d5428;
+      border-radius: 12px;
+      padding: 12px 14px;
+      font-size: 14px;
+    }
+    .toast.show { display: block; }
+
+    @media (max-width: 860px) {
+      .stage { grid-template-columns: 1fr; }
+      .visual { min-height: 0; }
+      .page { padding: 18px 14px 40px; }
+      h1 { font-size: 32px; }
+      header { gap: 12px; }
+    }
+  \</style>
+\</head>
+\<body>
+  \<div class="page">
+    \<header>
+      \<div class="brand">
+        \<div class="seal">
+          \<div>
+            \<small>MAISON\</small>
+            \<strong>Dini\<br>Decor\</strong>
+          \</div>
+        \</div>
+        \<p>MAISON &amp; DÉCOR\</p>
+      \</div>
+      \<div class="chip">صفحة المنتج\</div>
+    \</header>
+
+    \<main class="stage">
+      \<section class="visual" aria-label="صورة علاقة الغصن">
+        \<img src="assets/rack.png" alt="علاقة حائط سوداء على شكل غصن من Dini Decor، ارتفاع 70 سم">
+      \</section>
+
+      \<section class="info">
+        \<p class="eyebrow">علاقة حائط\</p>
+        \<h1>علاقة الغصن\</h1>
+        \<p class="latin">Dini Decor\</p>
+        \<p class="lead">علاقة حائط سوداء على شكل غصن. الارتفاع 70 سم، واللون أسود. كتعلّق المعاطف والحقائب، وكتزيّن الحائط بقطعة واحدة هادئة.\</p>
+
+        \<div class="price-row">
+          \<div class="price">149 \<span>درهم\</span>\</div>
+          \<div class="free">توصيل فابور\</div>
+        \</div>
+
+        \<div class="facts">
+          \<div class="fact">\<b>70 سم\</b>\<small>الارتفاع\</small>\</div>
+          \<div class="fact">\<b>أسود\</b>\<small>اللون\</small>\</div>
+          \<div class="fact">\<b>حائط\</b>\<small>طريقة التثبيت\</small>\</div>
+          \<div class="fact">\<b>فابور\</b>\<small>التوصيل\</small>\</div>
+        \</div>
+
+        \<div class="buy">
+          \<div class="qty">
+            \<button type="button" id="minus" aria-label="نقص">−\</button>
+            \<strong id="count">1\</strong>
+            \<button type="button" id="plus" aria-label="زيد">+\</button>
+          \</div>
+          \<button class="order" id="order" type="button">اطلب دابا\</button>
+        \</div>
+        \<p class="note">الثمن 149 درهم للقطعة. التوصيل فابور.\</p>
+        \<div class="toast" id="toast" role="status">\</div>
+      \</section>
+    \</main>
+  \</div>
+  \<script>
+    *const* count = document.getElementById("count");
+    *const* toast = document.getElementById("toast");
+    *let* n = 1;
+    *const* paint = () => { count.textContent = String(n); };
+    document.getElementById("plus").onclick = () => { n += 1; paint(); };
+    document.getElementById("minus").onclick = () => { if (n > 1) n -= 1; paint(); };
+    document.getElementById("order").onclick = () => {
+      *const* total = n \* 149;
+      toast.textContent = "تسجّل الطلب: " + n + " × علاقة الغصن — " + total + " درهم. التوصيل فابور.";
+      toast.classList.add("show");
+    };
+  \</script>
+\</body>
+\</html>
